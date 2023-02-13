@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import Profile from './Profile/ProfileComponent'
 function App() {
+  const person =[
+    {fullName:"Ahlem Touati", bio:"Good person", profession:"Student",img:"https://static.vecteezy.com/ti/vecteur-libre/p1/4773704-un-visage-de-fille-avec-un-beau-sourire-un-avatar-femme-pour-un-site-web-et-un-reseau-social-vectoriel.jpg"},
+    {fullName:"Leila Rajah", bio:"Good person", profession:"Student",img:"https://static.vecteezy.com/ti/vecteur-libre/p1/4773704-un-visage-de-fille-avec-un-beau-sourire-un-avatar-femme-pour-un-site-web-et-un-reseau-social-vectoriel.jpg"}
+  ]
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    {person.map (el=>
+      <Profile x={el.fullName} y={el.bio} z={el.profession} t={el.img}></Profile>)}
+      
     </div>
   );
 }
